@@ -1,0 +1,25 @@
+{
+  "roles": [
+    {
+      "name": "Security Administrator Viewer",
+      "desc": "Security Administrator Viewer Role",
+      "roles": "Cloud gateway viewer,Security Viewer,Appliance CLI viewer,Appliance web viewer"
+    },
+    {
+      "name": "Shell Accounts",
+      "desc": "Accounts that have shell access",
+      "roles": "Shell(non-CLI) access"
+    },
+    {
+      "name": "Security Administrator",
+      "desc": "Security Administrator Role",
+      "roles": "Security Officer,Appliance Web manager,Appliance CLI Administrator,Export Critificates,Cloud gateway Admin,Cloud gateway Auth,DPS Admin,Directory manager,Export Keys,RLP Manager"
+    },
+    {
+      "name": "Directory Administrator",
+      "desc": "Local LDAP Administrator role",
+      "roles": "Directory Manager"
+    }
+  ],
+  "users": []
+}

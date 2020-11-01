@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+    
+   
+<script src="app.js" type="text/javascript"></script>
+</head>
+
+<body>
+   
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+
+        <div class="col-sm-3 col-md-2 mr-0 "><input type="checkbox" id="btnControl" onclick="openNav(this)" />
+            <label class="btn" for="btnControl"><i class="fa fa-bars text-light mr-2" aria-hidden="true"></i></label><a
+                class="navbar-brand" href="/"> <img src="icon.png" alt="" style="height: 1.5rem;"></img>
+                protegrity</a></div>
+
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid" >
+        <div class="row">
+
+            <nav class="sidebar" id="sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column list-group list-group-flush">
+                        <li class="nav-item p-1 active">
+                            <a class="nav-link " href="#">
+                                Users
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="col">
+
+                <main class="main" id="main">
+                    <a href="/" class="p-1 m-2"> User Management </a>
+                    <hr>
+                    <div class="card m-1">
+                        <div class="card-header">
+                            <div class="row justify">
+                                
+                                <div class="col-sm-2 font-weight-bold"><a href="/">
+                                    < Back </a> <%= user%></div>
+                                <div class="col-sm-10">
+                                    <a href="/"><button type="button" name="cancel" id="cancel"
+                                        class="btn btn-sm btn-light float-right m-1"><i class="fa fa-trash" aria-hidden="true"></i></button></a>
+                                    <a href="/"><button type="button" name="editUser" id="editUser"
+                                                class="btn btn-sm btn-info float-right m-1">Save</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card">
+                                <div class="card-header">
+                                    1-Genral information
+                                </div>
+                                <div class="card-body">
+                                    <div class="row m-2">
+                                        <lable class="col-sm-3">First Name*:</lable>
+                                        <input name="firstName" id="firstName" placeholder="firstName"  class="col-sm-3" type="text" value="" disabled>
+                                    </div>
+                                    <div class="row m-2">
+                                        <lable class="col-sm-3">Last Name*:</lable>
+                                        <input name="lastName" id="lastName" placeholder="lastName" class="col-sm-3" type="text" value="" disabled>
+                                    </div>
+                                    <div class="row m-2">
+                                        <lable class="col-sm-3">User Name*:</lable>
+                                        <input name="userName" id="userName" placeholder="userName" class="col-sm-3" type="text" value="<%= user %>" disabled>
+                                    </div>
+                                    <div class="row m-2">
+                                        <lable class="col-sm-3">Description :</lable>
+                                        <input name="description" id="description" placeholder="description" class="col-sm-3" type="text" value="">
+                                    </div>                               
+                                    
+                                </div>
+                            </div>
+                            <div id="accordion" class="m-1">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                            <button class="btn btn-sm" data-toggle="collapse"
+                                                data-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                Rols
+                                            </button>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-parent="#accordion">
+                                        <div class="card-body" id="roles-table" data-url="/data" >
+                                            <!-- <table class="table table-sm">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th scope="col"> <div class="input-group">
+                                                            <input type="checkbox" name="name" id="name" aria-label="">
+                                                        </th>
+                                                        <th scope="col">Role Name</th>
+                                                        <th scope="col">Description</th>
+                                                        <th scope="col">role</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                    <td> <input type="checkbox" name="name" id="name" aria-label=""></td>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> <input type="checkbox" name="name" id="name" aria-label=""></td>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td> <input type="checkbox" name="name" id="name" aria-label=""></td>
+                                                        <td>Larry</td>
+                                                        <td>the Bird</td>
+                                                        <td>@twitter</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        last updated time: <%= time  %>
+    </footer>
+<script src="app.js"></script>
+</body>
+
+</body>
+
+</html>

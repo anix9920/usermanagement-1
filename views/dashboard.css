@@ -1,0 +1,143 @@
+body {
+  font-size: .875rem;
+  background-color: #e7e7e7;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+.main{
+  position:relative;
+  margin-left:8rem;
+  top:3.5rem;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   /* background-color: red; */
+   /* color: white; */
+   text-align: right;
+   font-size: medium;
+   height: 2rem;
+   border-top: 1px solid #b6b6b6;
+}
+#btnControl{
+  display: none;
+}
+/* #btnControl:checked  .sidebar{
+    width: 2rem !important;
+} */
+/*
+ * Sidebar
+ */
+.sidebar {
+  position:absolute;
+  top: 0;
+  width: 8rem;
+  height: calc(110vh);
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  background-color: rgb(68, 67, 67);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  /* padding-top: .5rem; */
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: rgb(245, 245, 245);
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+
+.sidebar .nav-item.active {
+  color: #000000;
+  background-color: #e7e7e7;
+  border-left: 2px solid red;
+}
+.sidebar .nav-item:hover {
+  border-left: 2px solid red;
+  background-color: #e7e7e7;
+}
+.sidebar .nav-item:hover .nav-link {
+   color: #000000;
+}
+
+.sidebar .nav-item.active .nav-link {
+  color: #000000;
+  background-color: #e7e7e7;
+}
+
+/* .sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+} */
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/*
+ * Content
+ */
+
+[role="main"] {
+  padding-top: 48px; /* Space for fixed navbar */
+}
+
+/*
+ * Navbar
+ */
+ .navbar{
+   background-color: #242323 !important;
+ }
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  /* background-color: rgba(0, 0, 0, .25); */
+  /* box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25); */
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+  
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}

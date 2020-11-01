@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+    <script src="app.js"></script>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+
+        <div class="col-sm-3 col-md-2 mr-0 "><input type="checkbox" id="btnControl" onclick="openNav(this)"/>
+            <label class="btn" for="btnControl"><i class="fa fa-bars text-light mr-2" aria-hidden="true"></i></label><a
+                class="navbar-brand" href="/"> <img src="icon.png" alt="" style="height: 1.5rem;"></img>
+                protegrity</a></div>
+
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <nav class="sidebar" id="sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column list-group list-group-flush">
+                        <li class="nav-item p-1 active">
+                            <a class="nav-link " href="#">
+                                Users
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="col">
+
+                <main class="main" id="main">
+                    <a href="/" class="p-1 m-2"> User Management </a>
+                    <hr>
+                    <div class="card m-1">
+                        <div class="card-header">
+                            <div class="row justify">
+                                <div class="col-sm-2 font-weight-bold">New User</div>
+                                <div class="col-sm-10">
+                                    <a href="/createUser"><button type="button" name="addUser" id="addUser"
+                                            class="btn btn-sm btn-info float-right m-1">Add User</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card">
+                                <div class="card-header">
+                                    1-Genral information
+                                </div>
+                                <div class="card-body" id="users-table" data-url="/data">
+                                    <div class="mb-3 col-sm-2">
+                                        <input class="form-control" type="text" id="userSearch" placeholder="Search"
+                                            aria-label="Search">
+                                    </div>
+                                    <!-- <table class="table table-sm">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">User Name</th>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table> -->
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        last updated time: <%= time  %> 
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</body>
+
+</html>
