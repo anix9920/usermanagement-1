@@ -12,5 +12,9 @@ You will only need to run this command when dependencies change in [package.json
 
 
 Run the following command which will run application on 'localhost:3000'
-
-     npm run devStart
+      
+     
+     $ git clone https://github.com/anix9920/usermanagement-1.git
+     $ cd usermanagement-1
+     $ npm install
+     $ npm run devStart
