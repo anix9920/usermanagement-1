@@ -132,5 +132,6 @@ app.get('/data',(req,res)=>{
     res.json(db)
 })
 // console.log(db.roles[3])
-app.listen(3000)
-
+app.listen(3000,function(){
+    console.log("Application is running on http://localhost:3000")
+})
