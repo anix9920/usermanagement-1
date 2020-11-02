@@ -1,4 +1,4 @@
-# usermangment-1
+# usermanagement-1
 This application was generated for protegrity-test
 Before you can build this project, you must install and configure the following dependencies on your machine:
 
