@@ -10,7 +10,6 @@ You will only need to run this command when dependencies change in [package.json
 
     npm install
 
-We use npm scripts and [Webpack][] as our build system.
 
 Run the following command which will run application on 'localhost:3000'
 
