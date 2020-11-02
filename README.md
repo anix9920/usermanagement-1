@@ -12,6 +12,6 @@ You will only need to run this command when dependencies change in [package.json
 
 We use npm scripts and [Webpack][] as our build system.
 
-Run the following command which will run applicartion on 'localhost:3000'
+Run the following command which will run application on 'localhost:3000'
 
      npm run devStart
